@@ -15,10 +15,10 @@ def gh_update(repo,new):
 
 
 if __name__ == '__main__':
-    g = Github(os.environ['MY_GITHUB_TOKEN'])
+    g = Github(os.environ['ACCESS_TOKEN'])
     BASE_URL = 'https://olympics.com/tokyo-2020/olympic-games/ko/results/all-sports/medal-standings.htm'
     soup = parsing_bs(BASE_URL)
     data = crawl_ranking_data(soup)
     repo = g.get_repo("Zih0/github-action-python")
-    gh_update(repo,data)
+    gh_update(repo, data)
 
