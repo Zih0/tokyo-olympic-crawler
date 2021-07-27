@@ -16,7 +16,7 @@ if __name__ == '__main__':
     BASE_URL = 'https://olympics.com/tokyo-2020/olympic-games/ko/results/all-sports/medal-standings.htm'
     soup = parsing_bs(BASE_URL)
     rank_data = crawl_ranking_data(soup)
-    repo = g.get_repo("Zih0/olympic-rank")
+    repo = g.get_repo("Zih0/tokyo-olympic-crawler")
     gh_update(repo, rank_data, "rank_data.json")
     MEDAL_URL = 'https://olympics.com/tokyo-2020/olympic-games/ko/results/all-sports/zzjm094b.json'
     medalist_data = crawl_medalist_data(MEDAL_URL)

@@ -18,6 +18,6 @@ https://raw.githubusercontent.com/Zih0/olympic-rank/main/rank_data.json
 
 https://raw.githubusercontent.com/Zih0/olympic-rank/main/medalist_data.json
 
-### Automation
+### 크롤링 자동화
 
-Github Actions 활용해 10분마다 크롤링
+Github Actions 활용해 자동으로 크롤링
