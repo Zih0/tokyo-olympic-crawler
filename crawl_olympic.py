@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from datetime import date
+import json
 
 def parsing_bs(url):
     """
@@ -39,3 +40,29 @@ def crawl_ranking_data(soup):
     result = {"date": updated, "ranking": crawl_data}
     return result
 
+
+def crawl_medalist_data(url):
+    """
+        메달 순위 크롤링 함수
+        :param url: json url
+        :return: dict
+        """
+    base_url = 'https://olympics.com/tokyo-2020/olympic-games'
+    crawl_data = []
+    data = json.loads(requests.get(url).text)
+    for medallist in data['medallistsJSON']:
+        noc = medallist['c_code']
+        name = medallist['a_name']
+        gender = medallist['a_sex']
+        image = base_url + medallist['a_img'].replace("../../..","")
+        sport = medallist['d_code']
+        if medallist['m_code'] == '1':
+            medal = "금"
+        elif medallist['m_code'] == '2':
+            medal = "은"
+        else:
+            medal = "동"
+        crawl_data.append({'국가': noc, '종목': sport, '메달': medal,'이름': name, '성별': gender, '사진': image})
+    updated = date.today().isoformat()
+    result = {"date": updated, "medalists": crawl_data}
+    return result
