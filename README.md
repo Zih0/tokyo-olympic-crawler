@@ -1,4 +1,15 @@
-# 올림픽 순위 크롤링
+# 올림픽 크롤러 
 
-github actions로 10분마다 현재 올림픽 순위를 크롤링해서 `crawling_data.json`에 저장
 
+### 올림픽 랭킹 크롤링 데이터
+
+`rank_data.json`
+
+### 올림픽 메달리스트 크롤링 데이터
+
+`medalist_data.json`
+
+
+### Automation
+
+Github Actions 활용해 10분마다 크롤링
