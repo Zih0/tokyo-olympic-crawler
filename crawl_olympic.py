@@ -49,6 +49,10 @@ def crawl_medalist_data(url):
         """
     base_url = 'https://olympics.com/tokyo-2020/olympic-games'
     crawl_data = []
+    gold = []
+    silver = []
+    bronze = []
+    kr = []
     data = json.loads(requests.get(url).text)
     for medallist in data['medallistsJSON']:
         noc = medallist['c_code']
@@ -58,11 +62,21 @@ def crawl_medalist_data(url):
         sport = medallist['d_code']
         if medallist['m_code'] == '1':
             medal = "금"
+            gold.append({'국가': noc, '종목': sport, '메달': medal, '이름': name, '성별': gender, '사진': image})
         elif medallist['m_code'] == '2':
             medal = "은"
+            silver.append({'국가': noc, '종목': sport, '메달': medal, '이름': name, '성별': gender, '사진': image})
         else:
             medal = "동"
+            bronze.append({'국가': noc, '종목': sport, '메달': medal, '이름': name, '성별': gender, '사진': image})
         crawl_data.append({'국가': noc, '종목': sport, '메달': medal,'이름': name, '성별': gender, '사진': image})
+        if noc == 'KOR':
+            kr.append({'국가': noc, '종목': sport, '메달': medal, '이름': name, '성별': gender, '사진': image})
     updated = date.today().isoformat()
-    result = {"date": updated, "medalists": crawl_data}
-    return result
+    medalists_result = {"date": updated, "medalists": crawl_data}
+    gold_result = {"date": updated, "medalists": gold}
+    silver_result = {"date": updated, "medalists": silver}
+    bronze_result = {"date": updated, "medalists": bronze}
+    kr_result = {"date": updated, "medalists": kr}
+
+    return medalists_result, gold_result, silver_result, bronze_result, kr_result
