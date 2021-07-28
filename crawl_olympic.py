@@ -113,7 +113,7 @@ def crawl_medalist_data(url):
         crawl_data.append(
             {"국가": noc, "종목": sport, "메달": medal, "이름": name, "성별": gender, "사진": image}
         )
-        if noc == "KOR":
+        if noc == "대한민국":
             kr.append(
                 {
                     "국가": noc,
