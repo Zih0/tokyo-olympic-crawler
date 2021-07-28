@@ -26,7 +26,7 @@ https://raw.githubusercontent.com/Zih0/tokyo-olympic-crawler/main/data/bronze_da
 
 ### 올림픽 한국 메달리스트 데이터 🇰🇷
 
-https://raw.githubusercontent.com/Zih0/tokyo-olympic-crawler/main/data/gold_data.json
+https://raw.githubusercontent.com/Zih0/tokyo-olympic-crawler/main/data/kr_data.json
 
 
 ### 크롤링 자동화
