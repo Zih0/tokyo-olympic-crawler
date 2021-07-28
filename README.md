@@ -9,14 +9,13 @@ https://olympics.com/tokyo-2020/olympic-games/en/results/all-sports/medal-standi
 
 `rank_data.json`
 
-https://raw.githubusercontent.com/Zih0/olympic-rank/main/rank_data.json
-
+https://raw.githubusercontent.com/Zih0/tokyo-olympic-crawler/main/rank_data.json
 
 ### 올림픽 메달리스트 크롤링 데이터
 
 `medalist_data.json`
 
-https://raw.githubusercontent.com/Zih0/olympic-rank/main/medalist_data.json
+https://raw.githubusercontent.com/Zih0/tokyo-olympic-crawler/main/medalist_data.json
 
 ### 크롤링 자동화
 
