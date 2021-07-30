@@ -20,6 +20,7 @@ sports_dict = {
     "TKW": "태권도",
     "TRI": "트라이애슬론",
     "FEN": "펜싱",
+    "BDM": "배드민턴"
 }
 
 countries_dict = {
