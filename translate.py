@@ -3,7 +3,9 @@ sports_dict = {
     "RUG": "7인제 럭비",
     "GAR": "기계체조",
     "DIV": "다이빙",
+    "BDM": "배드민턴",
     "SHO": "사격",
+    "BMX": "사이클 BMX 레이싱",
     "CRD": "사이클 도로",
     "MTB": "사이클 산악 자전거",
     "SRF": "서핑",
@@ -14,14 +16,17 @@ sports_dict = {
     "ARC": "양궁",
     "WLF": "역도",
     "JUD": "유도",
+    "ATH": "육상",
     "ROW": "조정",
     "CSL": "카누 슬라럼",
     "TTE": "탁구",
     "TKW": "태권도",
+    "TEN": "테니스",
     "TRI": "트라이애슬론",
+    "GTR": "트램폴린 체조",
     "FEN": "펜싱",
-    "BDM": "배드민턴"
 }
+
 
 countries_dict = {
     "ROC": "ROC",
@@ -232,19 +237,21 @@ countries_dict = {
     "HKG": "홍콩",
 }
 
-
 # from crawl_olympic import parsing_bs
-# url = 'https://olympics.com/tokyo-2020/olympic-games/ko/results/all-sports/medalists.htm'
+# url = (
+#     "https://olympics.com/tokyo-2020/olympic-games/ko/results/all-sports/medalists.htm"
+# )
 # soup = parsing_bs(url)
-# li_list = soup.select('li.dropdown-item')
+# li_list = soup.select("li.dropdown-item")
 # translated_dict = {}
-# for sport in li_list[21:42]:
-#     en_sports = sport.attrs['name']
+# for sport in li_list[21:47]:
+#     en_sports = sport.attrs["name"]
 #     kor_sports = sport.text.strip()
 #     translated_dict[en_sports] = kor_sports
-# translated_countries_dict = {}
-#
-# for country in li_list[388:-5]:
-#     noc = country.attrs['name']
-#     kor_country = country.select_one('span').text
-#     translated_countries_dict[noc] = kor_country
+# print(translated_dict)
+# # translated_countries_dict = {}
+# #
+# # for country in li_list[388:-5]:
+# #     noc = country.attrs['name']
+# #     kor_country = country.select_one('span').text
+# #     translated_countries_dict[noc] = kor_country
