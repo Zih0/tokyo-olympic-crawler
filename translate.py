@@ -1,30 +1,50 @@
 sports_dict = {
-    "BK3": "3X3 농구",
-    "RUG": "7인제 럭비",
+    "BK3": "3대3 농구",
+    "KTE": "가라테",
+    "GLF": "골프",
+    "MPN": "근대5종",
     "GAR": "기계체조",
+    "BKB": "농구",
     "DIV": "다이빙",
+    "RUG": "럭비",
+    "WRE": "레슬링",
+    "GRY": "리듬체조",
+    "OWS": "마라톤 수영",
+    "VVO": "배구",
     "BDM": "배드민턴",
+    "BOX": "복싱",
+    "VBV": "비치발리볼",
     "SHO": "사격",
     "BMX": "사이클 BMX 레이싱",
+    "BMF": "사이클 BMX 프리스타일",
     "CRD": "사이클 도로",
-    "MTB": "사이클 산악 자전거",
+    "MTB": "사이클 산악자전거",
+    "CTR": "사이클 트랙",
     "SRF": "서핑",
+    "WPO": "수구",
     "SWM": "수영",
-    "SKB": "스케이트보드",
+    "SKB": "스케이트보딩",
+    "CLB": "스포츠클라이밍",
     "EQU": "승마",
-    "BSB": "야구/소프트볼",
+    "SWA": "아티스틱 스위밍",
+    "BSB": "야구･소프트볼",
     "ARC": "양궁",
     "WLF": "역도",
+    "SAL": "요트",
     "JUD": "유도",
     "ATH": "육상",
     "ROW": "조정",
+    "FBL": "축구",
+    "CSP": "카누 스프린트",
     "CSL": "카누 슬라럼",
     "TTE": "탁구",
     "TKW": "태권도",
     "TEN": "테니스",
     "TRI": "트라이애슬론",
-    "GTR": "트램폴린 체조",
+    "GTR": "트램펄린",
     "FEN": "펜싱",
+    "HOC": "하키",
+    "HBL": "핸드볼",
 }
 
 
@@ -238,20 +258,19 @@ countries_dict = {
 }
 
 # from crawl_olympic import parsing_bs
-# url = (
-#     "https://olympics.com/tokyo-2020/olympic-games/ko/results/all-sports/medalists.htm"
-# )
+#
+# url = "https://olympics.com/tokyo-2020/ko/sports/"
 # soup = parsing_bs(url)
-# li_list = soup.select("li.dropdown-item")
+# li_list = soup.select(".tk-disciplines__link")
 # translated_dict = {}
-# for sport in li_list[21:47]:
-#     en_sports = sport.attrs["name"]
+# for sport in li_list:
+#     en_sports = sport.select_one("div").attrs["class"][1].split("-")[-1].upper()
 #     kor_sports = sport.text.strip()
 #     translated_dict[en_sports] = kor_sports
 # print(translated_dict)
-# # translated_countries_dict = {}
-# #
-# # for country in li_list[388:-5]:
-# #     noc = country.attrs['name']
-# #     kor_country = country.select_one('span').text
-# #     translated_countries_dict[noc] = kor_country
+# translated_countries_dict = {}
+#
+# for country in li_list[388:-5]:
+#     noc = country.attrs['name']
+#     kor_country = country.select_one('span').text
+#     translated_countries_dict[noc] = kor_country
